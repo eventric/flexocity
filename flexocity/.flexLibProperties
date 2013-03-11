@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="1">
+  <includeClasses>
+    <classEntry path="com.pcguild.flexocity.Flexocity"/>
+    <classEntry path="com.pcguild.flexocity.RPCResponder"/>
+    <classEntry path="com.pcguild.flexocity.context.ArrayContext"/>
+    <classEntry path="com.pcguild.flexocity.context.Context"/>
+    <classEntry path="com.pcguild.flexocity.context.FlexocityContext"/>
+    <classEntry path="com.pcguild.flexocity.error.ContextMergeError"/>
+    <classEntry path="com.pcguild.flexocity.error.ValidationError"/>
+    <classEntry path="com.pcguild.flexocity.event.FlexocityEvent"/>
+    <classEntry path="com.pcguild.flexocity.event.TemplateEvent"/>
+    <classEntry path="com.pcguild.flexocity.method.CallLaterManager"/>
+    <classEntry path="com.pcguild.flexocity.method.Method"/>
+    <classEntry path="com.pcguild.flexocity.method.MethodCallback"/>
+    <classEntry path="com.pcguild.flexocity.parser.Node"/>
+    <classEntry path="com.pcguild.flexocity.parser.Parser"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.Block"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.Delimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.Identifier"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.IndexInput"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.Instruction"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.MethodInput"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.Template"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.Text"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.AssignmentDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.DirectiveDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.EscapeDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.InDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.ParamDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.ReferenceDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.SequenceDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.enclosing.FormalCloser"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.enclosing.FormalOpener"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.enclosing.IndexCloser"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.enclosing.IndexOpener"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.enclosing.MethodCloser"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.enclosing.MethodOpener"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.logic.EqualsDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.logic.GreaterThanDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.logic.GreaterThanEqualDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.logic.LessThanDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.logic.LessThanEqualDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.node.delimiter.logic.NotEqualDelimiter"/>
+    <classEntry path="com.pcguild.flexocity.parser.settings.DefaultDelimiterSettings"/>
+    <classEntry path="com.pcguild.flexocity.parser.settings.DelimiterSettings"/>
+    <classEntry path="com.pcguild.flexocity.parser.settings.ParserSettings"/>
+    <classEntry path="com.pcguild.flexocity.parser.settings.filetypes.RTFDelimiterSettings"/>
+    <classEntry path="com.pcguild.flexocity.util.ArrayUtil"/>
+    <classEntry path="com.pcguild.flexocity.util.CharacterUtil"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

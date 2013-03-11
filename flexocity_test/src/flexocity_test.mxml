@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="init()"
+	width="700" height="700">
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import com.pcguild.flexocity.event.FlexocityEvent;
+			import com.pcguild.flexocity.context.FlexocityContext;
+			import com.pcguild.flexocity.parser.node.Template;
+			import com.pcguild.flexocity.parser.settings.filetypes.RTFDelimiterSettings;
+			import com.pcguild.flexocity.parser.settings.ParserSettings;
+			import com.pcguild.flexocity.context.Context;
+			import com.pcguild.flexocity.Flexocity;
+			
+			[Bindable] private var templateFilename:String = "";
+			[Bindable] private var templateFile:File = File.applicationDirectory;
+			private var templateFileFilter:FileFilter = new FileFilter("Documents","*.rtf");
+			[Bindable] private var xmlFilename:String = "";
+			[Bindable] private var xmlFile:File = File.applicationDirectory;
+			private var xmlFileFilter:FileFilter = new FileFilter("XML Documents", "*.xml");
+			[Bindable] private var outputFilename:String = "";
+			[Bindable] private var outputFile:File = File.applicationDirectory;
+			
+			[Bindable] private var template:Template;
+			private var mergeWhenGenerated:Boolean = false;
+			private var context:Context;
+			
+			/**
+			 *  Initializes the application.
+			 */
+			public function init():void
+			{
+				// Init the settings with RTF delimiters and shorthands turned off.
+				ParserSettings.init(new RTFDelimiterSettings({	disableShorthandIdentifiers:true,
+																disableShorthandInstructions:true }));
+				
+				// Listen for template generation.
+				Flexocity.addEventListener(FlexocityEvent.TEMPLATE_GENERATED, handleFlexocityEvent);
+				Flexocity.addEventListener(FlexocityEvent.TEMPLATE_ERROR, handleFlexocityEvent);
+				
+				// Setup the file select bindings.
+				templateFile.addEventListener(Event.SELECT, updateTemplateFilename);
+				xmlFile.addEventListener(Event.SELECT, updateXMLFilename);
+				outputFile.addEventListener(Event.SELECT, updateOutputFilename);
+				
+				// Initialize the file paths.
+				templateFile.nativePath = templateFile.nativePath + "/test.rtf";
+				xmlFile.nativePath = xmlFile.nativePath + "/test.xml";
+				outputFile.nativePath = outputFile.nativePath + "/test_output.rtf";
+				
+				// Initialize the filenames.
+				templateFilename = templateFile.nativePath;
+				xmlFilename = xmlFile.nativePath;
+				outputFilename = outputFile.nativePath;
+				
+				// Fire events for button enabilization.
+				dispatchEvent(new Event("parseButtonEnabledChanged"));
+				dispatchEvent(new Event("mergeButtonEnabledChanged"));
+				
+				// Center the window on the screen.
+                var screenBounds:Rectangle = Screen.mainScreen.bounds;
+                nativeWindow.x = (screenBounds.width - nativeWindow.width) / 2;
+                nativeWindow.y = (screenBounds.height - nativeWindow.height) / 2;
+			}
+			
+			private function handleFlexocityEvent(event:FlexocityEvent=null):void
+			{
+				switch (event.type) {
+					case FlexocityEvent.TEMPLATE_GENERATED:
+						template = event.data as Template;
+						
+						if (mergeWhenGenerated) {
+							var fileStream:FileStream = new FileStream();
+							
+							fileStream.open(outputFile, FileMode.WRITE);
+							
+							// Merge the template and the context into the output.
+							template.merge(context, fileStream);
+							
+							// Close output file.
+							fileStream.close();
+							
+							mergeWhenGenerated = false;
+						}
+						
+						break;
+					case FlexocityEvent.TEMPLATE_ERROR:
+						Alert.show(event.data, "Error");
+						break;
+				}
+			}
+			
+			/**
+			 *  Updates the template filename, clears the template, and fires
+			 *  appropriate events.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function updateTemplateFilename(event:Event=null):void
+			{
+				templateFilename = templateFile.nativePath;
+				template = null;
+				dispatchEvent(new Event("parseButtonEnabledChanged"));
+				dispatchEvent(new Event("mergeButtonEnabledChanged"));
+			}
+			
+			/**
+			 *  Updates the xml filename and fire appropriate events.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function updateXMLFilename(event:Event=null):void
+			{
+				xmlFilename = xmlFile.nativePath;
+				dispatchEvent(new Event("mergeButtonEnabledChanged"));
+			}
+			
+			/**
+			 *  Updates the output filename and fire appropriate events.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function updateOutputFilename(event:Event=null):void
+			{
+				outputFilename = outputFile.nativePath;
+				dispatchEvent(new Event("mergeButtonEnabledChanged"));
+			}
+			
+			/**
+			 *  Handling for template button clicks.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function templateButtonClicked(event:Event=null):void
+			{
+				templateFile.browseForOpen("Select template file", [ templateFileFilter ]);
+			}
+			
+			/**
+			 *  Handling for xml button clicks.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function xmlButtonClicked(event:Event=null):void
+			{
+				xmlFile.browseForOpen("Select XML file", [ xmlFileFilter ]);
+			}
+			
+			/**
+			 *  Handling for output button clicks.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function outputButtonClicked(event:Event=null):void
+			{
+				outputFile.browseForDirectory("Select output directory");
+			}
+			
+			/**
+			 *  Handling for parse button clicks.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function parseButtonClicked(event:Event=null):void
+			{
+				Flexocity.generateTemplate(templateFilename, this);
+			}
+			
+			/**
+			 *  Handling for merge button clicks.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function mergeButtonClicked(event:Event=null):void
+			{
+				var fileStream:FileStream = new FileStream();
+				context = new FlexocityContext();
+				
+				// Open the XML file using the file stream.
+				fileStream.open(xmlFile, FileMode.READ);
+				
+				// Setup the context.
+				context.put("reference.unresolved", "");
+				context.put("data", new XML(fileStream.readUTFBytes(fileStream.bytesAvailable)));
+				
+				// Close XML file
+				fileStream.close();
+				
+				// If the template has not been generated, get it.
+				if (template == null) {
+					Flexocity.generateTemplate(templateFilename, this);
+					
+					mergeWhenGenerated = true;
+				}
+				else {
+					fileStream.open(outputFile, FileMode.WRITE);
+					
+					// Merge the template and the context into the output.
+					template.merge(context, fileStream);
+					
+					// Close output file.
+					fileStream.close();
+				}
+			}
+			
+			/**
+			 *  Handling for output text input edits.
+			 *  
+			 * @param event The event which triggered this method.
+			 */
+			private function outputTextInputValueCommit(event:Event=null):void
+			{
+				outputFilename = outputTextInput.text;
+				outputFile.nativePath = outputFilename;
+				dispatchEvent(new Event("mergeButtonEnabledChanged"));
+			}
+			
+			/**
+			 *  Property for getting the parse button enabilization.
+			 *  
+			 * @return Whether to enable the parse button.
+			 */
+			[Bindable(event='parseButtonEnabledChanged')]
+			private function get parseButtonEnabled():Boolean
+			{
+				return templateFile.exists && !templateFile.isDirectory;
+			}
+			
+			/**
+			 *  Property for getting the merge button enabilization.
+			 *  
+			 * @return Whether to enable the merge button.
+			 */
+			[Bindable(event='mergeButtonEnabledChanged')]
+			private function get mergeButtonEnabled():Boolean
+			{
+				return parseButtonEnabled && xmlFile.exists && !xmlFile.isDirectory
+						&& !outputFile.isDirectory;
+			}
+		]]>
+	</mx:Script>
+	<mx:Button id="templateButton" x="10" y="8" label="Template File" click="templateButtonClicked()"/>
+	<mx:TextInput x="120" y="8" editable="false" width="504" text="{templateFilename}"/>
+	<mx:Button x="632" y="8" label="Open" click="navigateToURL(new URLRequest(templateFile.url));"/>
+	<mx:Button id="xmlButton" x="40" y="38" label="XML File" click="xmlButtonClicked()"/>
+	<mx:TextInput x="120" y="38" editable="false" width="504" text="{xmlFilename}"/>
+	<mx:Button id="outputButton" x="23" y="68" label="Output File" click="outputButtonClicked()"/>
+	<mx:Button x="632" y="38" label="Open" click="navigateToURL(new URLRequest(xmlFile.url));"/>
+	<mx:TextInput id="outputTextInput" x="120" y="68" width="504" text="{outputFilename}" valueCommit="outputTextInputValueCommit()"/>
+	<mx:Button x="632" y="68" label="Open" click="navigateToURL(new URLRequest(outputFile.url));"/>
+	<mx:Tree id="tree" x="10" y="98" width="678" height="500" dataProvider="{template.children}" rowHeight="20"/>
+	<mx:Button x="10" y="606" label="Parse" enabled="{parseButtonEnabled}" click="parseButtonClicked()"/>
+	<mx:Button x="77" y="606" label="Merge" enabled="{mergeButtonEnabled}" click="mergeButtonClicked()"/>
+</mx:WindowedApplication>

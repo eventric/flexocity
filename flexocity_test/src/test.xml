@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <city>
+    <label>City</label>
+    <value/>
+  </city>
+  <dateString>
+    <label>Date</label>
+    <value>10/4/2009</value>
+  </dateString>
+  <dayEvents/>
+  <dayHotelAssigns>
+    <item>
+      <addressLine1>
+        <label>Address 1</label>
+        <value>162 East Ohio Street</value>
+      </addressLine1>
+      <addressLine2>
+        <label>Address 2</label>
+        <value/>
+      </addressLine2>
+      <checkinTime>
+        <label>Check In Time</label>
+        <value>9:09 AM</value>
+      </checkinTime>
+      <checkoutTime>
+        <label>Check Out Time</label>
+        <value>9:09 AM</value>
+      </checkoutTime>
+      <city>
+        <label>City</label>
+        <value>Chicago</value>
+      </city>
+      <country>
+        <label>Country</label>
+        <value/>
+      </country>
+      <facilities>
+        <busParking>
+          <label>Bus Parking</label>
+          <value>Off-Site</value>
+        </busParking>
+        <cable>
+          <label>Cable</label>
+          <value/>
+        </cable>
+        <healthFacilities>
+          <label>Health Facilities</label>
+          <value>Fitness Center</value>
+        </healthFacilities>
+        <hotel_restaurant>
+          <label>Hotel Restaurant</label>
+          <value>Till 10:00 PM</value>
+        </hotel_restaurant>
+        <hotelLaundry>
+          <label>Hotel Laundry</label>
+          <value>Coin Laundry</value>
+        </hotelLaundry>
+        <hotelLounge>
+          <label>Hotel Lounge</label>
+          <value>Till 2:00 AM</value>
+        </hotelLounge>
+        <internet>
+          <label>Internet</label>
+          <value/>
+        </internet>
+        <milesToVenue>
+          <label>Miles To Venue</label>
+          <value/>
+        </milesToVenue>
+        <rate>
+          <label>Rate</label>
+          <value/>
+        </rate>
+        <roomService>
+          <label>Room Service</label>
+          <value>Till 10:00 PM</value>
+        </roomService>
+        <url>
+          <label>URL</label>
+          <value/>
+        </url>
+      </facilities>
+      <latLong>
+        <label>Coordinates</label>
+        <value>41.892826,-87.623066</value>
+      </latLong>
+      <milesToAirport>
+        <label>Miles to Airport</label>
+        <value>0</value>
+      </milesToAirport>
+      <name>
+        <label>Name</label>
+        <value>Best Western</value>
+      </name>
+      <notes>
+        <label>Notes</label>
+        <value>Walking distance to HOB</value>
+      </notes>
+      <phones>
+        <item>
+          <fax>
+            <label>fax</label>
+            <value>312-573-3136</value>
+          </fax>
+          <phone>
+            <label>phone</label>
+            <value>312-787-3100</value>
+          </phone>
+          <title>
+            <label>title</label>
+            <value>Main</value>
+          </title>
+        </item>
+        <item>
+          <title>
+            <label>title</label>
+            <value>Sales</value>
+          </title>
+        </item>
+        <item>
+          <title>
+            <label>title</label>
+            <value>Toll Free</value>
+          </title>
+        </item>
+      </phones>
+      <roomList/>
+      <state>
+        <label>State</label>
+        <value>IL</value>
+      </state>
+      <timeZone>
+        <label>Time Zone</label>
+        <value/>
+      </timeZone>
+      <zip>
+        <label>Zip</label>
+        <value>60611</value>
+      </zip>
+    </item>
+  </dayHotelAssigns>
+  <dayTasks/>
+  <dayType>
+    <label>Day Type</label>
+    <value/>
+  </dayType>
+  <name>
+    <label>Name</label>
+    <value>New Day</value>
+  </name>
+  <schedule>
+  	<item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>8:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>8:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Load In</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>9:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>false</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>8:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Day Travel</value>
+    </title>
+    <travel>
+      <arrivalDatetime>
+        <label>Arrival Time</label>
+        <value>11/12/2009 11:30 AM</value>
+      </arrivalDatetime>
+      <arrivalLocation>
+        <label>Arrival Location</label>
+        <value>Chicago</value>
+      </arrivalLocation>
+      <arrivalTimeZone>
+        <label>Arrival Time Zone</label>
+      </arrivalTimeZone>
+      <departureDatetime>
+        <label>Departure Time</label>
+        <value>11/12/2009 11:30 AM</value>
+      </departureDatetime>
+      <departureLocation>
+        <label>Departure Location</label>
+      </departureLocation>
+      <departureTimeZone>
+        <label>Departure Time Zone</label>
+      </departureTimeZone>
+      <detail>
+        <label>Detail</label>
+        <value>Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah</value>
+      </detail>
+      <distance>
+        <label>Distance</label>
+        <value>300</value>
+      </distance>
+      <distanceMetric>
+        <label>Metric</label>
+        <value>Miles</value>
+      </distanceMetric>
+      <party>
+        <label>Party</label>
+        <value>New Party</value>
+      </party>
+      <travelDetails/>
+      <travelTypeId>
+        <label>Travel Type</label>
+        <value>Ground</value>
+      </travelTypeId>
+    </travel>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>9:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>false</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>8:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Day Travel</value>
+    </title>
+    <travel>
+      <arrivalDatetime>
+        <label>Arrival Time</label>
+        <value>11/12/2009 11:57 AM</value>
+      </arrivalDatetime>
+      <arrivalLocation>
+        <label>Arrival Location</label>
+      </arrivalLocation>
+      <arrivalTimeZone>
+        <label>Arrival Time Zone</label>
+      </arrivalTimeZone>
+      <departureDatetime>
+        <label>Departure Time</label>
+        <value>11/12/2009 11:57 AM</value>
+      </departureDatetime>
+      <departureLocation>
+        <label>Departure Location</label>
+      </departureLocation>
+      <departureTimeZone>
+        <label>Departure Time Zone</label>
+      </departureTimeZone>
+      <detail>
+        <label>Detail</label>
+        <value>Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah</value>
+      </detail>
+      <distance>
+        <label>Distance</label>
+      </distance>
+      <distanceMetric>
+        <label>Metric</label>
+        <value>Miles</value>
+      </distanceMetric>
+      <party>
+        <label>Party</label>
+        <value>New Party</value>
+      </party>
+      <travelDetails/>
+      <travelTypeId>
+        <label>Travel Type</label>
+        <value>Ground</value>
+      </travelTypeId>
+    </travel>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>9:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>false</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>8:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>After Show Travel</value>
+    </title>
+    <travel>
+      <arrivalDatetime>
+        <label>Arrival Time</label>
+        <value>11/12/2009 11:58 AM</value>
+      </arrivalDatetime>
+      <arrivalLocation>
+        <label>Arrival Location</label>
+        <value>Cincinnati</value>
+      </arrivalLocation>
+      <arrivalTimeZone>
+        <label>Arrival Time Zone</label>
+      </arrivalTimeZone>
+      <departureDatetime>
+        <label>Departure Time</label>
+        <value>11/12/2009 11:58 AM</value>
+      </departureDatetime>
+      <departureLocation>
+        <label>Departure Location</label>
+      </departureLocation>
+      <departureTimeZone>
+        <label>Departure Time Zone</label>
+      </departureTimeZone>
+      <detail>
+        <label>Detail</label>
+        <value>Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah Goddamnit baby you know I asin't lyin' to ya I'm only gonna tell you one tiiiiiiimeahhhhhhhhyeeeeah</value>
+      </detail>
+      <distance>
+        <label>Distance</label>
+      </distance>
+      <distanceMetric>
+        <label>Metric</label>
+        <value>Miles</value>
+      </distanceMetric>
+      <party>
+        <label>Party</label>
+        <value>New Party</value>
+      </party>
+      <travelDetails/>
+      <travelTypeId>
+        <label>Travel Type</label>
+        <value>Ground</value>
+      </travelTypeId>
+    </travel>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>11:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>10:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Breakfast</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>1:45 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>1:00 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Lunch</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>9:00 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>6:00 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Dinner</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>6:30 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>6:30 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Doors Open</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>7:30 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>7:30 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Show Call</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>9:00 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>8:00 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Opening Set Time</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>9:00 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>8:45 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Set Change</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>11:00 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>9:00 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Headline Set Time</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>11:00 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>11:00 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Crew Call Back</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>11:30 PM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>11:30 PM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Curfew</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value>And here are all the details that will come along with this tag just to get the testing out of the way. We're also testing local newlines, as it seems this bad boy can handle entered ones.
+
+By the way, does it handle newlines?</value>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>12:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>12:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Band Driver Pickup of sorts, used to test how long this puppy goes</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>1:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>1:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Load Out</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>1:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>1:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Depart</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>1:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>true</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>1:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Crew Driver Pickup</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>1:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>false</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>1:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Load Out</value>
+    </title>
+  </item>
+  <item>
+    <assignToXmlCommaList>
+      <label>Assigned To</label>
+      <value/>
+    </assignToXmlCommaList>
+    <details>
+      <label>details</label>
+      <value/>
+    </details>
+    <endDatetime>
+      <label>End Time</label>
+      <value>1:00 AM</value>
+    </endDatetime>
+    <isConfirmed>
+      <label>Confirmed</label>
+      <value>false</value>
+    </isConfirmed>
+    <startDatetime>
+      <label>Start Time</label>
+      <value>1:00 AM</value>
+    </startDatetime>
+    <title>
+      <label>Title</label>
+      <value>Depart</value>
+    </title>
+  </item>
+  </schedule>
+  <state>
+    <label>State</label>
+    <value/>
+  </state>
+  <timeZone>
+    <label>Time Zone</label>
+    <value/>
+  </timeZone>
+  <zip>
+    <label>Zip</label>
+    <value/>
+  </zip>
+</root>
